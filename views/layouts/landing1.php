@@ -26,11 +26,11 @@ use app\assets\AppAsset;
     <style type="text/css">
         a {
             color: white;
-            text-decoration: none;
+            text-decoration: underline;
         }
         a:hover {
             color: white;
-            text-decoration: underline;
+            text-decoration: none;
         }
         a:visited {
             color: white;
