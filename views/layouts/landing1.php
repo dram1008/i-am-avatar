@@ -116,7 +116,7 @@ use app\assets\AppAsset;
     font-family: 'Times New Roman', Times, serif;
     font-size:300%;
     padding: 20px 0px 40px 0px;
-    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/XLmcOvCa6UM" frameborder="0" allowfullscreen></iframe>
+    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/y7LWDpGOnkc" frameborder="0" allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
