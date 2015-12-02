@@ -22,7 +22,7 @@ use yii\web\Response;
 
 class SiteController extends BaseController
 {
-    public $layout = 'landing';
+    public $layout = 'landing1';
 
     public function actions()
     {
@@ -39,33 +39,8 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
-//        $d = 'params=%7B%22auto_hd%22%3Afalse%2C%22autoplay_reason%22%3A%22unknown%22%2C%22default_hd%22%3Afalse%2C%22disable_native_controls%22%3Atrue%2C%22inline_player%22%3Afalse%2C%22pixel_ratio%22%3A1%2C%22preload%22%3Atrue%2C%22start_muted%22%3Afalse%2C%22video_data%22%3A%7B%22progressive%22%3A%5B%7B%22hd_src%22%3A%22https%3A%5C%2F%5C%2Fvideo-fra3-1.xx.fbcdn.net%5C%2Fhvideo-xft1%5C%2Fv%5C%2Ft42.4659-2%5C%2F11995827_353472038110547_41500709_n.mp4%3Foh%3D0b902469bee4be200b946f9381f00f65%26oe%3D563FFECB%22%2C%22is_hds%22%3Afalse%2C%22stream_type%22%3A%22progressive%22%2C%22is_live_stream%22%3Afalse%2C%22rotation%22%3A0%2C%22sd_src%22%3A%22https%3A%5C%2F%5C%2Fvideo-fra3-1.xx.fbcdn.net%5C%2Fhvideo-xft1%5C%2Fv%5C%2Ft42.4659-2%5C%2F11995827_353472038110547_41500709_n.mp4%3Foh%3D0b902469bee4be200b946f9381f00f65%26oe%3D563FFECB%22%2C%22video_id%22%3A%22353472034777214%22%2C%22sd_tag%22%3A%22%22%2C%22hd_tag%22%3A%22%22%2C%22live_routing_token%22%3A%22%22%2C%22spherical_hd_src%22%3Anull%2C%22spherical_hd_tag%22%3Anull%2C%22spherical_sd_src%22%3Anull%2C%22spherical_sd_tag%22%3Anull%2C%22projection%22%3A%22flat%22%2C%22subtitles_src%22%3Anull%2C%22dash_manifest%22%3Anull%7D%5D%2C%22hls%22%3Anull%7D%2C%22video_data_preference%22%3A%7B%221%22%3A%5B%7B%22hd_src%22%3A%22https%3A%5C%2F%5C%2Fvideo-fra3-1.xx.fbcdn.net%5C%2Fhvideo-xft1%5C%2Fv%5C%2Ft42.4659-2%5C%2F11995827_353472038110547_41500709_n.mp4%3Foh%3D0b902469bee4be200b946f9381f00f65%26oe%3D563FFECB%22%2C%22is_hds%22%3Afalse%2C%22stream_type%22%3A%22progressive%22%2C%22is_live_stream%22%3Afalse%2C%22rotation%22%3A0%2C%22sd_src%22%3A%22https%3A%5C%2F%5C%2Fvideo-fra3-1.xx.fbcdn.net%5C%2Fhvideo-xft1%5C%2Fv%5C%2Ft42.4659-2%5C%2F11995827_353472038110547_41500709_n.mp4%3Foh%3D0b902469bee4be200b946f9381f00f65%26oe%3D563FFECB%22%2C%22video_id%22%3A%22353472034777214%22%2C%22sd_tag%22%3A%22%22%2C%22hd_tag%22%3A%22%22%2C%22live_routing_token%22%3A%22%22%2C%22spherical_hd_src%22%3Anull%2C%22spherical_hd_tag%22%3Anull%2C%22spherical_sd_src%22%3Anull%2C%22spherical_sd_tag%22%3Anull%2C%22projection%22%3A%22flat%22%2C%22subtitles_src%22%3Anull%2C%22dash_manifest%22%3Anull%7D%5D%2C%222%22%3Anull%7D%2C%22show_captions_default%22%3Afalse%2C%22persistent_volume%22%3Atrue%2C%22hide_controls_when_finished%22%3Afalse%2C%22buffer_length%22%3A0.1%7D&width=276&height=394&user=100001742075258&log=no&div_id=id_563fe4cb0e4d82676084578&swf_id=swf_id_563fe4cb0e4d82676084578&browser=Chrome+46.0.2490.80&tracking_domain=https%3A%2F%2Fpixel.facebook.com&post_form_id=&string_table=https%3A%2F%2Fs-static.ak.facebook.com%2Fflash_strings.php%2Ft100488%2Fru_RU';
-//        $d = explode('&', $d);
-//        $r = [];
-//        foreach($d as $i) {
-//            $dd = explode('=',$i);
-//            $r[] = [$dd[0], urldecode($dd[1])];
-//        }
-//        $ret = '';
-//        foreach($r as $i) {
-//            if ($i[0] == 'params') {
-//                $ret = json_decode($i[1]);
-//            }
-//        }
-//        VarDumper::dump($ret);
-        $query = Article::query()->orderBy(['date_insert' => SORT_DESC]);
-        $all = $query->count();
-        $pageSize = 10;
-        $pagesCount = floor(($all + $pageSize - 1)/$pageSize);
-        $limit = $pageSize;
-        $page = self::getParam('page', 1);
-        $offset = ($page-1) * $pageSize;
-        $query->offset($offset)->limit($limit);
 
         return $this->render([
-            'list' => $query->all(),
-            'pagesCount' => $pagesCount,
-            'page' => $page,
         ]);
     }
 

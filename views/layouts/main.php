@@ -145,7 +145,7 @@ $this->registerMetaTag(['name' => 'title', 'content' => $this->title]);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; <a href="/">ТПК</a> 2015</p>
+        <p class="pull-left">&copy; <a href="/">Школа Богов</a> 2015</p>
     </div>
 </footer>
 
