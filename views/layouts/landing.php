@@ -11,168 +11,180 @@ use app\assets\AppAsset;
 
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="UTF-8">
-    <title><?= Html::encode($this->title) ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><?= Html::encode($this->title) ?> :: Школа Богов</title>
     <?= Html::csrfMetaTags() ?>
-    <link rel="stylesheet" type="text/css" media="all" href="/style/style.css"/>
-    <link rel="stylesheet" type="text/css" href="/style/css/media-queries.css"/>
-    <link rel="stylesheet" type="text/css" href="/style/js/player/mediaelementplayer.css"/>
-    <link
-        href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic|Open+Sans+Condensed:300,700'
-        rel="stylesheet" type='text/css'>
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/style/css/ie8.css" media="all"/>
-    <![endif]-->
-    <!--[if IE 9]>
-    <link rel="stylesheet" type="text/css" href="/style/css/ie9.css" media="all"/>
-    <![endif]-->
-    <script type="text/javascript" src="/style/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/style/js/ddsmoothmenu.js"></script>
-    <script type="text/javascript" src="/style/js/retina.js"></script>
-    <script type="text/javascript" src="/style/js/selectnav.js"></script>
-    <script type="text/javascript" src="/style/js/jquery.masonry.min.js"></script>
-    <script type="text/javascript" src="/style/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/style/js/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="/style/js/mediaelement.min.js"></script>
-    <script type="text/javascript" src="/style/js/mediaelementplayer.min.js"></script>
-    <script type="text/javascript" src="/style/js/jquery.dcflickr.1.0.js"></script>
-    <script type="text/javascript" src="/style/js/twitter.min.js"></script>
+    <meta name="og:image" content="http://www.i-am-avatar.com/share.jpg">
+    <meta name="og:url" content="http://www.i-am-avatar.com/">
+    <meta name="og:title" content="Школа Богов">
+    <meta name="og:description" content="Миссия: Трансформировать всех желающих людей в Богов-Аватаров наделенных божественными способностями. Установление на Планете Земля мира Богов Со-Творцов. Обучить всех дарить Любовь ближнему теми дарами и талантами, которые были даны Творцом от рождения. Обучение таким наукам как: ...">
     <link rel="shortcut icon" href="/images/ico.png">
-    <script type="text/javascript">
-        $.backstretch("/style/images/bg/1.jpg");
-    </script>
+    <style type="text/css">
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        a:visited {
+            color: white;
+            text-decoration: underline;
+        }
+        a:active {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
     <?php $this->head() ?>
 </head>
-<body>
+
+<body style="margin: 0px 0px 0px 0px;">
 <?php $this->beginBody() ?>
-<div class="scanlines"></div>
-
-<!-- Begin Header -->
-<div class="header-wrapper opacity">
-    <div class="header" style="padding: 5px 5px 0px 5px;">
-        <!-- Begin Logo -->
-        <div class="logo" style="padding: 0px;">
-            <a href="/">
-                <img src="/images/LogoTPK_site_blog-01.png" alt="" height="68"/>
-            </a>
-        </div>
-        <!-- End Logo -->
-        <!-- Begin Menu -->
-        <div id="menu-wrapper">
-            <div id="menu" class="menu">
-                <ul id="tiny">
-                    <li><a href="/about">О компании</a></li>
-                    <li><a href="/contact">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <!-- End Menu -->
-    </div>
-</div>
-<!-- End Header -->
-
-<!-- Begin Wrapper -->
-<div class="wrapper"><!-- Begin Intro -->
-
-    <?= $content ?>
-
-</div>
-<!-- End Wrapper -->
-
-<!-- Begin Footer -->
-<div class="footer-wrapper">
-    <div id="footer" class="four">
-        <div id="first" class="widget-area">
-            <div class="widget widget_search">
-                <h3 class="widget-title">Поиск</h3>
-
-                <form class="searchform" method="get" action="/search">
-                    <input type="text" name="term" value="Введите слово ..." onFocus="this.value=''"
-                           onBlur="this.value='Введите слово ...'"/>
-                </form>
-            </div>
-
-        </div>
-        <!-- #first .widget-area -->
-
-        <div id="second" class="widget-area">
-            <div class="widget widget_archive">
-                <h3 class="widget-title">Архивы</h3>
-                <?php
-                $min = \app\models\Article::query()->select('min(date_insert)')->scalar();
-                $dateMin = new DateTime($min);
-                $dateNow = new DateTime();
-                $rows = \app\models\Article::query()->select([
-                    'count(*) as c1',
-                    'YEAR(date) as year',
-                    'MONTH(date) as month',
-                ])
-                ->groupBy([
-                    'YEAR(date)',
-                    'MONTH(date)',
-                ])
-                ->orderBy([
-                    'YEAR(date)' => SORT_DESC,
-                    'MONTH(date)' => SORT_DESC,
-                ])
-                ->all();
-                /** @var int $max максиальный месяц с годом  0-11 */
-                $max = $rows[0]['year']*12+$rows[0]['month'];
-                $min = $rows[count($rows)-1]['year']*12+$rows[count($rows)-1]['month'];
-
-                ?>
-                <ul>
-                    <?php for($i = $max; $i >= $min; $i--) { ?>
-                        <?php
-                        $month = $i%12;
-                        $monthZero = $month;
-                        if ($monthZero < 10) $monthZero = '0'.$monthZero;
-                        $monthArray = [
-                            'Январь',
-                            'Февраль',
-                            'Март',
-                            'Апрель',
-                            'Май',
-                            'Июнь',
-                            'Июль',
-                            'Август',
-                            'Сентябрь',
-                            'Октябрь',
-                            'Ноябрь',
-                            'Декабрь',
-                        ];
-                        $year = floor($i/12);
-                        $count = 0;
-                        foreach($rows as $item) {
-                            if ($item['year'] == $year && $item['month'] == $month) {
-                                $count = $item['c1'];
-                            }
-                        }
-                        ?>
-                        <li><a href="<?= \yii\helpers\Url::to(['site/articles_month', 'year' => $year, 'month' => $monthZero]) ?>"><?= $monthArray[$month-1] ?> <?= $year ?></a> (<?= $count ?>)</li>
-                    <?php } ?>
-                </ul>
-            </div>
-        </div>
-        <!-- #second .widget-area -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center" style="
+    background-color: #cf016e;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:500%;
+    padding: 40px 0px 20px 0px;
+    ">Школа Богов
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
+                src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
+                /></td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:120%;
+    padding: 0px 0px 40px 0px;
+    ">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" align="center">
+                <tr>
+                    <td>
+                        <p>Миссия:</p>
+                        <p>Трансформировать всех желающих людей в Богов-Аватаров наделенных божественными способностями.</p>
+                        <p>Установление на Планете Земля мира Богов Со-Творцов.</p>
+                        <p>Обучить всех дарить Любовь ближнему теми дарами и талантами, которые были даны Творцом от рождения.</p>
+                        <p>Обучение таким наукам как:<br>
+                            ~ Трансформации страха в любовь<br>
+                            ~ Распознавание лжи<br>
+                            ~ Ясновидение<br>
+                            ~ Яснослышание<br>
+                            ~ Словообразование и сензарский энергоинформационный телепатический язык<br>
+                            ~ Родительская любовь<br>
+                            ~ Дружба<br>
+                            ~ Открытие и использование Звездной Памяти<br>
+                            ~ Практика многомерной эволюции и многомерная личность<br>
+                            ~ Близнецовые пламена и Супружеская любовь<br>
+                            ~ Род, чистота Рода и крови<br>
+                            ~ Благодарение – основа счастья<br>
+                            ~ Время, календарь и нулевая точка<br>
+                            ~ Медитация<br>
+                            ~ Природа<br>
+                            ~ Сознание как потенциал Творения<br>
+                            ~ Земля как живое Существо и Единый организм<br>
+                            ~ Житейская мудрость<br>
+                            ~ Раскрытие божественного потенциала Мужчины (для мальчиков)<br>
+                            ~ Раскрытие божественного потенциала Женщины (для девочек)<br>
+                            ~ <a href="http://www.galaxysss.ru/category/house/433">Полет на «Крыльях Ангела»</a><br>
+                            ~ <a href="http://www.galaxysss.ru/services/11" target="_blank">Задействование полного потенциала мозговой деятельности</a><br>
+                            ~ Балансировка Разума и Сердца<br>
+                            ~ Чтение Хроник Акаши<br>
+                            ~ Исследование Храма Внутреннего Сердца</p>
+                        <?= $content ?>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/y7LWDpGOnkc" frameborder="0" allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/YWoCsoPpwig" frameborder="0" allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    ">
+            <p style="text-align: center; font-family: 'courier new'; font-size: 12pt; margin: 30px 0px 0px 0px;">Почта: god@i-am-avatar.com</p>
+            <p>Скоро открытие</p>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color:#1c69b7;
+    color:white;
+    padding: 20px 0px 20px 0px;
+    ">
+            <a href="http://www.galaxysss.ru/" target="_blank">Галактический Союз Сил Света</a> ♥ <a
+                href="http://www.galaxysss.ru/vasudev/login" target="_blank">Элитный Клуб Фрактального Бизнеса «Vasudev
+                Bagavan»</a>
 
 
+    </tr>
 
-        <div id="fourth" class="widget-area">
-        </div>
-        <!-- #fourth .widget-area -->
-    </div>
-</div>
-<div class="site-generator-wrapper">
-    <div class="site-generator">ТПК 2015. Все права защищены.
-    </div>
-</div>
-<!-- End Footer -->
-<script type="text/javascript" src="/style/js/scripts.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter33748969 = new Ya.Metrika({
+                        id:33748969,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true,
+                        trackHash:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/33748969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</table>
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -22,7 +22,7 @@ use yii\web\Response;
 
 class SiteController extends BaseController
 {
-    public $layout = 'landing1';
+    public $layout = 'landing';
 
     public function actions()
     {
