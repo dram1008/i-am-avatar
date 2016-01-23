@@ -126,7 +126,19 @@ use app\assets\AppAsset;
     font-family: 'Times New Roman', Times, serif;
     font-size:300%;
     padding: 20px 0px 40px 0px;
-    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/YWoCsoPpwig" frameborder="0" allowfullscreen></iframe>
+    ">
+            <iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/YWoCsoPpwig" frameborder="0" allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    ">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/mb1blLZ0yP4" frameborder="0" allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
