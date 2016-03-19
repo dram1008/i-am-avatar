@@ -60,7 +60,7 @@ use app\assets\AppAsset;
     </tr>
     <tr>
         <td align="center" style="
-    background-color: #1c69b7;
+    background-color: #cf016e;
     color:white;
     font-family: 'Times New Roman', Times, serif;
     font-size:300%;
