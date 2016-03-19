@@ -68,6 +68,17 @@ use app\assets\AppAsset;
     background-color: #1c69b7;
     color:white;
     font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    ">
+            <iframe src="https://player.vimeo.com/video/159642580" width="800" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
     font-size:120%;
     padding: 0px 0px 40px 0px;
     ">
@@ -108,17 +119,6 @@ use app\assets\AppAsset;
                     </td>
                 </tr>
             </table>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:300%;
-    padding: 20px 0px 40px 0px;
-    ">
-            <iframe src="https://player.vimeo.com/video/159642580" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
