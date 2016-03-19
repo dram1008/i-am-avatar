@@ -118,7 +118,7 @@ use app\assets\AppAsset;
     font-size:300%;
     padding: 20px 0px 40px 0px;
     ">
-            <iframe src="https://player.vimeo.com/video/159642580" width="100%" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/159642580" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
