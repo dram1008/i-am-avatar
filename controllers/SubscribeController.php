@@ -104,7 +104,7 @@ class SubscribeController extends BaseController
             return self::jsonErrorId(101, 'Не корректный формат адреса');
         }
         $email = strtolower($email);
-        $user = User::find(['email' => $email, 'subscribe_is_god' => 1]);
+        $user = User::find(['email' => $email]);
         if ($user) {
             $user->update(['subscribe_is_god' => 1]);
         } else {
