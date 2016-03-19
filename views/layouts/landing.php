@@ -59,11 +59,6 @@ use app\assets\AppAsset;
         </td>
     </tr>
     <tr>
-        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
-                src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
-                /></td>
-    </tr>
-    <tr>
         <td align="center" style="
     background-color: #1c69b7;
     color:white;
@@ -73,6 +68,11 @@ use app\assets\AppAsset;
     ">
             <iframe src="https://player.vimeo.com/video/159642580" width="800" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </td>
+    </tr>
+    <tr>
+        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
+                src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
+                /></td>
     </tr>
     <tr>
         <td align="center" style="
