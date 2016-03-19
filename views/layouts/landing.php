@@ -8,7 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-
+\app\assets\AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -23,7 +23,9 @@ use app\assets\AppAsset;
     <meta name="og:title" content="Школа Богов">
     <meta name="og:description" content="Миссия: Трансформировать всех желающих людей в Богов-Аватаров наделенных божественными способностями. Установление на Планете Земля мира Богов Со-Творцов. Обучить всех дарить Любовь ближнему теми дарами и талантами, которые были даны Творцом от рождения. Обучение таким наукам как: ...">
     <link rel="shortcut icon" href="/images/ico.png">
+    <?php $this->head() ?>
     <style type="text/css">
+
         a {
             color: white;
             text-decoration: underline;
@@ -41,7 +43,6 @@ use app\assets\AppAsset;
             text-decoration: underline;
         }
     </style>
-    <?php $this->head() ?>
 </head>
 
 <body style="margin: 0px 0px 0px 0px;">
@@ -51,7 +52,7 @@ use app\assets\AppAsset;
         <td align="center" style="
     background-color: #cf016e;
     color:white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia;
     font-size:500%;
     padding: 40px 0px 20px 0px;
     ">Школа Богов
@@ -116,7 +117,79 @@ use app\assets\AppAsset;
     font-family: 'Times New Roman', Times, serif;
     font-size:300%;
     padding: 20px 0px 40px 0px;
-    "><iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/y7LWDpGOnkc" frameborder="0" allowfullscreen></iframe>
+    ">
+            <iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/yZ-NWb7fAe4" frameborder="0" allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: Verdana;
+    padding: 20px 0px 40px 0px;
+    ">
+            <table width="40" align="center">
+                <tr>
+                    <td style="text-align: center;">
+                        <a href="http://www.galaxysss.ru/category/medical/344/shop/product/1" target="_blank">
+                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000001/original/image.jpg"
+                                 width="400"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                        <p>Акселератор мозга</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/9" target="_blank">
+                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000009/small/image.jpg"
+                                 width="400"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                        <p>Кольцо Огненного Архангела</p>
+                    </td>
+                </tr>
+
+            </table>
+            <table width="600" align="center">
+                <tr>
+                    <td style="text-align: center;padding: 10px;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/6" target="_blank">
+                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000006/small/image.jpg"
+                                 width="300"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                        <p>Печать Творца</p>
+                    </td>
+                    <td style="text-align: center;padding: 10px;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/7" target="_blank">
+                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000007/small/image.jpg"
+                                 width="300"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                        <p>Печать Богородицы</p>
+                    </td>
+                </tr>
+            </table>
+            <img src="/images/controller/site/index/1.jpg"
+                 style="border-radius: 30px;"
+                 width="400" align="center">
+
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:300%;
+    padding: 20px 0px 40px 0px;
+    ">
+            <iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/y7LWDpGOnkc" frameborder="0" allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
@@ -138,7 +211,7 @@ use app\assets\AppAsset;
     font-size:300%;
     padding: 20px 0px 40px 0px;
     ">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/mb1blLZ0yP4" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="400" style="max-width:900px;" src="https://www.youtube.com/embed/mb1blLZ0yP4" frameborder="0" allowfullscreen></iframe>
         </td>
     </tr>
     <tr>
@@ -146,6 +219,105 @@ use app\assets\AppAsset;
     background-color: #1c69b7;
     color:white;
     font-family: 'Times New Roman', Times, serif;
+    padding: 20px 0px 40px 0px;
+    ">
+            <?php
+            $isShowForm = false;
+            if (Yii::$app->user->isGuest) {
+                if (!isset(Yii::$app->request->cookies['subscribeIsStarted'])) {
+                    $isShowForm = true;
+                }
+            } else if (Yii::$app->user->identity->getEmail() == '') {
+                $isShowForm = true;
+            }
+            if (\yii\helpers\ArrayHelper::getValue(Yii::$app->params, 'isTransfere', false) == true) {
+                $isShowForm = false;
+            }
+            ?>
+            <?php if ($isShowForm) { ?>
+                <div class="panel panel-default" style="width: 400px;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Подписаться на рассылку</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form id="formSubscribe">
+                            <?php if (Yii::$app->user->isGuest) {?>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="formSubscribeName" placeholder="Имя">
+                                    <p class="help-block help-block-error hide">Это поле должно быть заполнено обязательно</p>
+                                </div>
+                            <?php }?>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="formSubscribeEmail" placeholder="Email">
+                                <p class="help-block help-block-error hide">Это поле должно быть заполнено обязательно</p>
+                            </div>
+                            <button type="button" class="btn btn-default" style="width: 100%;" id="formSubscribeSubmit">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
+
+                <?php
+                $this->registerJs(<<<JS
+    // форма подписки
+        {
+            function setCookie (name, value, expires, path, domain, secure) {
+                document.cookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "");
+            }
+            $('#formSubscribeSubmit').click(function() {
+                var object;
+                object = $('#formSubscribeName');
+                if (object.length > 0) {
+                    if (object.val() == '') {
+                        object.parent().addClass('has-error').find('.help-block-error').html('Это обязательное поле').show().removeClass('hide');
+                        object.focus();
+
+                        return;
+                    }
+                }
+                object = $('#formSubscribeEmail');
+                if (object.val() == '') {
+                    object.parent().addClass('has-error').find('.help-block-error').html('Это обязательное поле').show().removeClass('hide');
+                    object.focus();
+
+                    return;
+                }
+                ajaxJson({
+                    url: '/subscribe/mail',
+                    data: {
+                        email: $('#formSubscribeEmail').val(),
+                        name: $('#formSubscribeName').val()
+                    },
+                    success: function(ret) {
+                        $('#formSubscribe').remove();
+                        setCookie('subscribeIsStarted', 1);
+                        infoWindow('Вам на почту выслано подтверждение, пройдите пожалуйста на почту');
+                    },
+                    errorScript: function(ret) {
+                        object = $('#formSubscribeEmail');
+                        object.parent().addClass('has-error').find('.help-block-error').html(ret.data).show().removeClass('hide');
+                    }
+                });
+            });
+            $('#formSubscribeName, #formSubscribeEmail').on('input', function() {
+                $(this).parent().removeClass('has-error').find('.help-block-error').hide();
+            });
+        }
+JS
+    );
+                ?>
+            <?php } ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
+    font-family: Georgia;
     font-size:300%;
     padding: 20px 0px 40px 0px;
     ">
