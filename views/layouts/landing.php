@@ -78,6 +78,35 @@ use app\assets\AppAsset;
         <td align="center" style="
     background-color: #1c69b7;
     color:white;
+    font-family: Verdana;
+    padding: 20px 0px 40px 0px;
+    ">
+            <table width="600" align="center">
+                <tr>
+                    <td style="text-align: center;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/6" target="_blank">
+                            <img src="/images/controller/site/index/avatar1.jpg"
+                                 width="300"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                    </td>
+                    <td style="text-align: center;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/7" target="_blank">
+                            <img src="/images/controller/site/index/avatar2.jpg"
+                                 width="300"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="
+    background-color: #1c69b7;
+    color:white;
     font-family: 'Times New Roman', Times, serif;
     font-size:120%;
     padding: 0px 0px 40px 0px;
@@ -156,15 +185,6 @@ use app\assets\AppAsset;
             <table width="600" align="center">
                 <tr>
                     <td style="text-align: center;padding: 10px;">
-                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/6" target="_blank">
-                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000006/small/image.jpg"
-                                 width="300"
-                                 style="border-radius: 30px;"
-                                 alt=""/>
-                        </a>
-                        <p>Печать Творца</p>
-                    </td>
-                    <td style="text-align: center;padding: 10px;">
                         <a href="http://www.galaxysss.ru/category/study/443/shop/product/7" target="_blank">
                             <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000007/small/image.jpg"
                                  width="300"
@@ -172,6 +192,15 @@ use app\assets\AppAsset;
                                  alt=""/>
                         </a>
                         <p>Печать Богородицы</p>
+                    </td>
+                    <td style="text-align: center;padding: 10px;">
+                        <a href="http://www.galaxysss.ru/category/study/443/shop/product/6" target="_blank">
+                            <img src="http://www.galaxysss.ru/upload/FileUpload2/gs_unions_shop_product/00000006/small/image.jpg"
+                                 width="300"
+                                 style="border-radius: 30px;"
+                                 alt=""/>
+                        </a>
+                        <p>Печать Творца</p>
                     </td>
                 </tr>
             </table>
