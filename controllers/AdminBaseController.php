@@ -20,6 +20,8 @@ use yii\widgets\ActiveForm;
 
 class AdminBaseController extends BaseController
 {
+    public $layout = 'admin';
+
     public function behaviors()
     {
         return [
