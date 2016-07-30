@@ -44,12 +44,17 @@ class SiteController extends BaseController
         ]);
     }
 
+    public function actionVoznesenie2016()
+    {
+        return $this->render([]);
+    }
+
     public function actionArticles_month($year, $month)
     {
         return $this->render([
             'list' => Article::query([
                 'MONTH(date_insert)' => $month,
-                'YEAR(date_insert)' => $year,
+                'YEAR(date_insert)'  => $year,
             ])->orderBy(['date_insert' => SORT_DESC])->all(),
             'year' => $year,
             'month' => $month,
