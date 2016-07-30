@@ -33,7 +33,11 @@ $this->title = 'Главная';
 <tr>
     <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
             src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
-            /></td>
+            />
+
+
+
+    </td>
 </tr>
 <tr>
     <td align="center" style="
@@ -42,6 +46,20 @@ $this->title = 'Главная';
     font-family: Verdana;
     padding: 20px 0px 40px 0px;
     ">
+        <p align="center" style="font-size: 150%; margin: 0px 0px 40px 0px;">
+            <a href="/voznesenie2016">
+               Приглашаем вас на практический семинар
+            </a>
+            </p>
+        <p align="center" style="font-size: 150%; margin: 0px 0px 40px 0px;">
+            <a href="/voznesenie2016">
+                <img
+                    src="/images/controller/site/voznesenie2016/afisha.jpg"
+                    style="border-radius: 20px; width: 100%; max-width: 600px;"
+                    >
+            </a>
+            </p>
+
         <table width="600" align="center">
             <tr>
                 <td style="text-align: center;">

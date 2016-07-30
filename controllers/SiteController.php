@@ -46,6 +46,8 @@ class SiteController extends BaseController
 
     public function actionVoznesenie2016()
     {
+        $this->layout = 'content';
+
         return $this->render([]);
     }
 
