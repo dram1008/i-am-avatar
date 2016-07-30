@@ -18,8 +18,6 @@ $this->registerMetaTag(['name' => 'og:description', 'content' => $description]);
 
 ?>
 
-<ul class="social">
-    <li><a class="facebook" href="<?= (string)(new csUrl('http://www.facebook.com/sharer.php', [
-            'u' => $url,
-        ])) ?>"></a></li>
-</ul>
+<a target="_blank" class="btn btn-primary" href="<?= (new csUrl('http://www.facebook.com/sharer.php', [
+    'u' => $url,
+]))->__toString() ?>"> Поделиться в FaceBook</a>
