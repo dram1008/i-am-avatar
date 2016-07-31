@@ -50,9 +50,14 @@ use app\assets\AppAsset;
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
-        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
+        <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;">
+
+            <a href="/">
+                <img
                 src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
-                /></td>
+                />
+        </a>
+        </td>
     </tr>
     <tr>
         <td align="center" style="
@@ -65,18 +70,7 @@ use app\assets\AppAsset;
         </td>
     </tr>
 
-    <tr>
-        <td align="center" style="
-    background-color: #1c69b7;
-    color:white;
-    font-family: Georgia;
-    font-size:300%;
-    padding: 20px 0px 40px 0px;
-    ">
-            <p style="text-align: center; font-family: 'courier new'; font-size: 12pt; margin: 30px 0px 0px 0px;">Почта: god@i-am-avatar.com</p>
-            <p>Скоро открытие</p>
-        </td>
-    </tr>
+
     <tr>
         <td align="center" style="
     background-color:#1c69b7;

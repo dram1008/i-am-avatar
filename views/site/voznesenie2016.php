@@ -6,13 +6,12 @@ $this->title = 'Запуск Реактора Вознесения и  Откр�
 <div class="container">
 
 <p align="center" style="font-size: 150%;">
-    <a href="/">
     <img
         src="/images/controller/site/voznesenie2016/13580370_1064248726994274_3886181805229291558_o.jpg"
         width="300"
         style="border-radius: 20px;"
         >
-    </a>
+
 </p>
 <p align="center" style="font-size: 150%;">Сефера при участии Школы Богов</p>
 
