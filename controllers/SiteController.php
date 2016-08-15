@@ -51,6 +51,13 @@ class SiteController extends BaseController
         return $this->render([]);
     }
 
+    public function actionGods()
+    {
+        $this->layout = 'content';
+
+        return $this->render([]);
+    }
+
     public function actionArticles_month($year, $month)
     {
         return $this->render([

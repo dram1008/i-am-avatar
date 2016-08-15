@@ -6,6 +6,7 @@ return [
 
     'cabinet/profile'                                              => 'cabinet/profile',
     'voznesenie2016'                                               => 'site/voznesenie2016',
+    'gods'                                               => 'site/gods',
 
     'cabinet/passwordChange'                                       => 'cabinet/password_change',
     'cabinet/changeEmail'                                          => 'cabinet/change_email',
