@@ -24,6 +24,9 @@ $this->title = 'Официальный Реестр Бого-людей'
                 ]
             ])
         ]),
+        'tableOptions' => [
+            'class' => 'table table-hover',
+        ],
         'columns' => [
             'id',
             'name_first',
