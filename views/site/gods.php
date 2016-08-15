@@ -19,6 +19,7 @@ $this->title = 'Официальный Реестр Бого-людей'
             'query' => \app\models\God::find(),
             'sort' => new \yii\data\Sort([
                 'attributes' => [
+                    'id',
                     'name_first',
                     'name_last',
                     'name_middle',
@@ -26,7 +27,7 @@ $this->title = 'Официальный Реестр Бого-людей'
             ])
         ]),
         'tableOptions' => [
-            'class' => 'table table-hover',
+            'class' => 'table',
         ],
         'columns' => [
             'id',
