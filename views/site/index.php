@@ -47,18 +47,11 @@ $this->title = 'Главная';
     padding: 20px 0px 40px 0px;
     ">
         <p align="center" style="font-size: 150%; margin: 0px 0px 40px 0px;">
-            <a href="/voznesenie2016">
-               Приглашаем вас на практический семинар
+            <a href="/gods">
+                Официальный Реестр Бого-людей
             </a>
-            </p>
-        <p align="center" style="font-size: 150%; margin: 0px 0px 40px 0px;">
-            <a href="/voznesenie2016">
-                <img
-                    src="/images/controller/site/voznesenie2016/afisha.jpg"
-                    style="border-radius: 20px; width: 100%; max-width: 600px;"
-                    >
-            </a>
-            </p>
+        </p>
+
 
         <table width="600" align="center">
             <tr>
