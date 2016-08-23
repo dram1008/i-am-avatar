@@ -23,6 +23,7 @@ $this->title = 'Официальный Реестр Бого-людей'
                     'name_first',
                     'name_last',
                     'name_middle',
+                    'date',
                 ]
             ])
         ]),
@@ -34,6 +35,7 @@ $this->title = 'Официальный Реестр Бого-людей'
             'name_first',
             'name_last',
             'name_middle',
+            'date:date:Дата',
         ]
     ]) ?>
     <?php \yii\widgets\Pjax::end() ?>
