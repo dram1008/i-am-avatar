@@ -39,10 +39,10 @@ class BitCoinBlockTrailPayment
             'identifier' => 'mywallet1',
             'password'   => 'mypass',
         ]);
-        \yii\helpers\VarDumper::dump([$wallet],5,true);exit;
 // создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
-        // создаю подписчика
+        \yii\helpers\VarDumper::dump([$address],5,true);exit;
+// создаю подписчика
         $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');
         // подписываюсь на приход денег в кошелек
         $client->subscribeAddressTransactions('my-webhook-id', $address, 6);
