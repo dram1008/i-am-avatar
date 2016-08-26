@@ -45,21 +45,21 @@ class BitCoinBlockTrailPayment
 
         $qrCode = new QrCode();
         header('Content-Type: image/png');
-        $qrCode
+        $content = $qrCode
             ->setText($address)
             ->setSize(300)
             ->setPadding(10)
             ->setErrorCorrection('high')
             ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
             ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
-            ->setLabel('My label')
+            ->setLabel('0.001265 BTC')
             ->setLabelFontSize(16)
-            ->render()
+            ->get()
         ;
-        exit();
-//        \yii\helpers\VarDumper::dump([$content],5,true);exit;
+//        exit();
+         \yii\helpers\VarDumper::dump([$content],5,true);exit;
 
-// создаю подписчика
+        // создаю подписчика
         $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');
         // подписываюсь на приход денег в кошелек
         $client->subscribeAddressTransactions('my-webhook-id', $address, 6);
