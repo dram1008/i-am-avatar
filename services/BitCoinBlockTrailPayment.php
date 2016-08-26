@@ -45,7 +45,7 @@ class BitCoinBlockTrailPayment
 
         $qrCode = new QrCode();
         $content = $qrCode
-            ->setText($address)
+            ->setText('bitcoin:'.$address.'?amount=' . '0.001265')
             ->setSize(300)
             ->setPadding(10)
             ->setErrorCorrection('high')
