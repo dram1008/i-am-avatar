@@ -44,14 +44,15 @@ class BitCoinBlockTrailPayment
         $address = $wallet->getNewAddress();
 
         $qrCode = new QrCode();
+        $amount = '0.00000001';
         $content = $qrCode
-            ->setText('bitcoin:'.$address.'?amount=' . '0.001265')
+            ->setText('bitcoin:'.$address.'?amount=' . $amount)
             ->setSize(300)
             ->setPadding(10)
             ->setErrorCorrection('high')
             ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
             ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
-            ->setLabel('0.001265 BTC')
+            ->setLabel($amount . ' BTC')
             ->setLabelFontSize(16)
             ->get('png')
         ;
