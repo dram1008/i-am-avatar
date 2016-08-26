@@ -29,6 +29,7 @@ class BitCoinBlockTrailPayment
 
     public function getForm()
     {
+        \Yii::setAlias('Blocktrail\SDK', '@vendor/blocktrail/blocktrail-sdk-php/src');
         $btc = BlocktrailSDK::toBTC(789);
 
         $client = new BlocktrailSDK($this->apiKey, $this->apiKeySecret);
