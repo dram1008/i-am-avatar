@@ -44,7 +44,6 @@ class BitCoinBlockTrailPayment
         $address = $wallet->getNewAddress();
 
         $qrCode = new QrCode();
-        header('Content-Type: image/png');
         $content = $qrCode
             ->setText($address)
             ->setSize(300)
@@ -54,7 +53,7 @@ class BitCoinBlockTrailPayment
             ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
             ->setLabel('0.001265 BTC')
             ->setLabelFontSize(16)
-            ->getImage()
+            ->get('png')
         ;
 //        exit();
          \yii\helpers\VarDumper::dump([$content],5,true);exit;
