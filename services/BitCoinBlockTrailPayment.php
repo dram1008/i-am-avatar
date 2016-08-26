@@ -32,9 +32,9 @@ class BitCoinBlockTrailPayment
         $btc = BlocktrailSDK::toBTC(789);
 
         $client = new BlocktrailSDK($this->apiKey, $this->apiKeySecret);
-        \yii\helpers\VarDumper::dump(1,3,true);exit;
         list($wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys) =
             $client->createNewWallet("mywallet1", "mypass");
+        \yii\helpers\VarDumper::dump([$wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys],5,true);exit;
 
         $wallet = $client->initWallet([
             'readOnly'   => true,
