@@ -32,16 +32,15 @@ class BitCoinBlockTrailPayment
         $btc = BlocktrailSDK::toBTC(789);
 
         $client = new BlocktrailSDK($this->apiKey, $this->apiKeySecret);
-        list($wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys) =
-            $client->createNewWallet("mywallet1", "mypass");
-        \yii\helpers\VarDumper::dump([$wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys],5,true);exit;
+//        list($wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys) =
+//            $client->createNewWallet("mywallet1", "mypass");
 
         $wallet = $client->initWallet([
-            'readOnly'   => true,
-            'identifier' => 'mywallet-c8f0835c69ab5586',
-            'password'   => 'dram10081',
+            'identifier' => 'mywallet1',
+            'password'   => 'mypass',
         ]);
-        // создаю новый адрес для зачисления платежа
+        \yii\helpers\VarDumper::dump([$wallet],5,true);exit;
+// создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
         // создаю подписчика
         $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');

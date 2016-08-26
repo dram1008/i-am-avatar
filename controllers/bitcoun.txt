@@ -1,0 +1,95 @@
+[
+    0 => Blocktrail\SDK\Wallet#1
+    (
+        [*:sdk] => Blocktrail\SDK\BlocktrailSDK#2
+        (
+            [*:client] => Blocktrail\SDK\Connection\RestClient#3
+            (
+                [*:guzzle] => GuzzleHttp\Client#4
+                (
+                    [GuzzleHttp\Client:messageFactory] => GuzzleHttp\Message\MessageFactory(...)
+                    [GuzzleHttp\Client:baseUrl] => GuzzleHttp\Url(...)
+                    [GuzzleHttp\Client:defaults] => [...]
+                    [GuzzleHttp\Client:fsm] => GuzzleHttp\RequestFsm(...)
+                    [GuzzleHttp\Client:emitter] => GuzzleHttp\Event\Emitter(...)
+                )
+                [*:apiKey] => '181b582f0c99fcdbd1d92e843fbe2fa31f6ecb95'
+                [*:verboseErrors] => false
+            )
+            [*:network] => 'bitcoin'
+            [*:testnet] => false
+        )
+        [*:identifier] => 'mywallet1'
+        [*:primaryMnemonic] => 'dinner math wealth section matrix tennis miracle skull improve cause any lock maze hotel party clump desk melody birth tourist coast nerve brass album world increase maple hero gun siren clap woman image winter tackle fatigue later uncover safe kite lawsuit change vague rely fatal little hawk fire'
+        [*:primaryPrivateKey] => Blocktrail\SDK\Bitcoin\BIP32Key#5
+        (
+            [Blocktrail\SDK\Bitcoin\BIP32Key:key] => 'xprv9s21ZrQH143K3bM4esiKkMkidFUwv6YeAJciPnUMCQfoQhNudZY4wQA22eGHsNUobSpEv1B8ZCj6WJ1LLsXqf7YEKN4xHYPMFWL4WDf2Hri'
+            [Blocktrail\SDK\Bitcoin\BIP32Key:path] => Blocktrail\SDK\Bitcoin\BIP32Path#6
+            (
+                [*:path] => [
+                    0 => 'm'
+                ]
+            )
+            [Blocktrail\SDK\Bitcoin\BIP32Key:publicKey] => null
+            [Blocktrail\SDK\Bitcoin\BIP32Key:derivations] => []
+        )
+        [*:primaryPublicKeys] => [
+            0 => Blocktrail\SDK\Bitcoin\BIP32Key#7
+            (
+                [Blocktrail\SDK\Bitcoin\BIP32Key:key] => 'xpub699axbSVnfwUeKnLBvmZ9yq9JPPJW7LwXvaRsENusqP5r86VjMuZGYg7F2nAFWEaKq8t9jia9VQowXEQPLFPdVw56KQuvrsPF8xj7ZaRp3f'
+                [Blocktrail\SDK\Bitcoin\BIP32Key:path] => Blocktrail\SDK\Bitcoin\BIP32Path#8
+                (
+                    [*:path] => [...]
+                )
+                [Blocktrail\SDK\Bitcoin\BIP32Key:publicKey] => null
+                [Blocktrail\SDK\Bitcoin\BIP32Key:derivations] => []
+            )
+        ]
+        [*:backupPublicKey] => Blocktrail\SDK\Bitcoin\BIP32Key#9
+        (
+            [Blocktrail\SDK\Bitcoin\BIP32Key:key] => 'xpub661MyMwAqRbcEgmehqwhQAfgPeG61p1G6CYVqAeWyJ9VE2FzLTxanMdoBRQ1uesMZCNHHhebPajB8fTCwvqYPSazH4BJdhjdR9bJs1UGKPp'
+            [Blocktrail\SDK\Bitcoin\BIP32Key:path] => Blocktrail\SDK\Bitcoin\BIP32Path#10
+            (
+                [*:path] => [
+                    0 => 'M'
+                ]
+            )
+            [Blocktrail\SDK\Bitcoin\BIP32Key:publicKey] => null
+            [Blocktrail\SDK\Bitcoin\BIP32Key:derivations] => []
+        )
+        [*:blocktrailPublicKeys] => [
+            0 => Blocktrail\SDK\Bitcoin\BIP32Key#11
+            (
+                [Blocktrail\SDK\Bitcoin\BIP32Key:key] => 'xpub687DeMmb3SM2WrJt3Ws4qE8LWpXifdaaiCNQ9eYysWFhho8FEq3W4T9FF8Yquxv69US3SBmPAUhYLSwEnem1UavSW3ZCWp6JG2JZaX8NRpy'
+                [Blocktrail\SDK\Bitcoin\BIP32Key:path] => Blocktrail\SDK\Bitcoin\BIP32Path#12
+                (
+                    [*:path] => [...]
+                )
+                [Blocktrail\SDK\Bitcoin\BIP32Key:publicKey] => null
+                [Blocktrail\SDK\Bitcoin\BIP32Key:derivations] => []
+            )
+        ]
+        [*:keyIndex] => 0
+        [*:network] => 'bitcoin'
+        [*:testnet] => false
+        [*:pubKeys] => []
+        [*:derivations] => []
+        [*:derivationsByAddress] => []
+        [*:walletPath] => Blocktrail\SDK\WalletPath#13
+        (
+            [*:keyIndex] => 0
+            [*:chain] => 0
+            [*:address] => 0
+        )
+        [Blocktrail\SDK\Wallet:checksum] => '1GdWk7Jm3xtfrvoPhgAcyfrvVR4LRwDuFA'
+        [Blocktrail\SDK\Wallet:locked] => false
+    )
+    1 => 'dinner math wealth section matrix tennis miracle skull improve cause any lock maze hotel party clump desk melody birth tourist coast nerve brass album world increase maple hero gun siren clap woman image winter tackle fatigue later uncover safe kite lawsuit change vague rely fatal little hawk fire'
+    2 => 'monitor labor next town guard weapon someone hat message basket fury offer merry stand inform mistake come behind chase frost equal position quality divert toast suspect crater viable tobacco school truth slice absorb dirt trim whip swarm hero engage equal stairs fluid damage cave grass trim coconut rule'
+    3 => [
+        0 => [
+            0 => 'xpub687DeMmb3SM2WrJt3Ws4qE8LWpXifdaaiCNQ9eYysWFhho8FEq3W4T9FF8Yquxv69US3SBmPAUhYLSwEnem1UavSW3ZCWp6JG2JZaX8NRpy'
+            1 => 'M/0\''
+        ]
+    ]
+]
