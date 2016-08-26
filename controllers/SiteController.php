@@ -44,6 +44,12 @@ class SiteController extends BaseController
         ]);
     }
 
+    public function actionTest()
+    {
+        $payment = new \app\services\BitCoinBlockTrailPayment();
+        $payment->getForm();
+    }
+
     public function actionVoznesenie2016()
     {
         $this->layout = 'content';
