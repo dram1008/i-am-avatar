@@ -32,7 +32,15 @@ class BitCoinBlockTrailPayment
         $btc = BlocktrailSDK::toBTC(789);
 
         $client = new BlocktrailSDK($this->apiKey, $this->apiKeySecret);
-        $wallet = $client->initWallet("mywallet-c8f0835c69ab5586", "dram10081");
+        \yii\helpers\VarDumper::dump(1,3,true);exit;
+        list($wallet, $primaryMnemonic, $backupMnemonic, $blocktrailPublicKeys) =
+            $client->createNewWallet("mywallet1", "mypass");
+
+        $wallet = $client->initWallet([
+            'readOnly'   => true,
+            'identifier' => 'mywallet-c8f0835c69ab5586',
+            'password'   => 'dram10081',
+        ]);
         // создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
         // создаю подписчика
