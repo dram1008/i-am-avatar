@@ -54,7 +54,7 @@ class BitCoinBlockTrailPayment
             ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
             ->setLabel('0.001265 BTC')
             ->setLabelFontSize(16)
-            ->get('png')
+            ->getImage()
         ;
 //        exit();
          \yii\helpers\VarDumper::dump([$content],5,true);exit;
