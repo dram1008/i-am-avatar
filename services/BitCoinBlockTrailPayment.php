@@ -44,7 +44,7 @@ class BitCoinBlockTrailPayment
         $address = $wallet->getNewAddress();
 
         $qrCode = new QrCode();
-        $amount = '0.00000001';
+        $amount = '0.0000001';
         $content = $qrCode
             ->setText('bitcoin:'.$address.'?amount=' . $amount)
             ->setSize(300)
