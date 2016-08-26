@@ -58,12 +58,12 @@ class BitCoinBlockTrailPayment
         ;
 
 //        exit();
-         \yii\helpers\VarDumper::dump([$address],5,true);exit;
 
         // создаю подписчика
-        $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');
+        $newWebhook = $client->setupWebhook('https://www.i-am-avatar.com/success?type=btc&billing_id=123', 'my-webhook-id');
         // подписываюсь на приход денег в кошелек
         $client->subscribeAddressTransactions('my-webhook-id', $address, 6);
+        \yii\helpers\VarDumper::dump([$address],5,true);exit;
     }
 
     /**

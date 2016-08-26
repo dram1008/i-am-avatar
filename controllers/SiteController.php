@@ -50,6 +50,14 @@ class SiteController extends BaseController
         $payment->getForm();
     }
 
+    public function actionSuccess()
+    {
+        mail('dram1008@yandex.ru', 'btc', \yii\helpers\VarDumper::dumpAsString([
+            'get'  => \Yii::$app->request->get(),
+            'post' => \Yii::$app->request->post(),
+        ]));
+    }
+
     public function actionVoznesenie2016()
     {
         $this->layout = 'content';
