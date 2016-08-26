@@ -93,3 +93,4 @@
         ]
     ]
 ]
+$client->createNewWallet("mywallet1", "mypass");

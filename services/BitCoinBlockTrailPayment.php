@@ -40,6 +40,9 @@ class BitCoinBlockTrailPayment
             'identifier' => 'mywallet1',
             'password'   => 'mypass',
         ]);
+        list($confirmedBalance, $unconfirmedBalance) = $wallet->getBalance();
+        \yii\helpers\VarDumper::dump([$confirmedBalance, $unconfirmedBalance],5,true);exit;
+
 // создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
 
