@@ -56,10 +56,9 @@ class BitCoinBlockTrailPayment
             ->setLabelFontSize(16)
             ->get('png')
         ;
-        header('Content-Type: image/png');
-        echo $content;
-        exit();
-//         \yii\helpers\VarDumper::dump([$content],5,true);exit;
+
+//        exit();
+         \yii\helpers\VarDumper::dump([$address],5,true);exit;
 
         // создаю подписчика
         $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');
