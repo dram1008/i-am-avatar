@@ -17,6 +17,7 @@ use common\models\PaymentSystem;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use Endroid\QrCode\QrCode;
 
 use pjhl\multilanguage\helpers\Languages;
 use yii\httpclient\Client;
@@ -41,7 +42,22 @@ class BitCoinBlockTrailPayment
         ]);
 // создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
-        \yii\helpers\VarDumper::dump([$address],5,true);exit;
+
+        $qrCode = new QrCode();
+        $content = $qrCode
+            ->setText($address)
+            ->setSize(300)
+            ->setPadding(10)
+            ->setErrorCorrection('high')
+            ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
+            ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
+            ->setLabel('My label')
+            ->setLabelFontSize(16)
+            ->render()
+        ;
+        \yii\helpers\VarDumper::dump([$content],5,true);exit;
+        header('Content-Type: image/png');
+
 // создаю подписчика
         $newWebhook = $client->setupWebhook('https://www.galaxysss.com/shop/order/success?type=btc&billing_id=123', 'my-webhook-id');
         // подписываюсь на приход денег в кошелек
