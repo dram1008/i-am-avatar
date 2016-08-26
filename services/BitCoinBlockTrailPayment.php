@@ -29,11 +29,9 @@ class BitCoinBlockTrailPayment
 
     public function getForm()
     {
-        \Yii::setAlias('Blocktrail\SDK', '@vendor/blocktrail/blocktrail-sdk-php/src');
         $btc = BlocktrailSDK::toBTC(789);
 
         $client = new BlocktrailSDK($this->apiKey, $this->apiKeySecret);
-        \yii\helpers\VarDump::dump($client);
         $wallet = $client->initWallet("mywallet-c8f0835c69ab5586", "dram10081");
         // создаю новый адрес для зачисления платежа
         $address = $wallet->getNewAddress();
