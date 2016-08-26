@@ -63,6 +63,8 @@ class BitCoinBlockTrailPayment
         $newWebhook = $client->setupWebhook('https://www.i-am-avatar.com/success?type=btc&billing_id=123', 'my-webhook-id');
         // подписываюсь на приход денег в кошелек
         $client->subscribeAddressTransactions('my-webhook-id', $address, 6);
+        header('Content-type: image/png');
+        echo($content);exit;
         \yii\helpers\VarDumper::dump([$address],5,true);exit;
     }
 
