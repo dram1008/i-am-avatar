@@ -23,9 +23,22 @@
         "yiisoft/yii2-jui": "*",
         "dram1008/library": "*",
         "mistic100/Bootstrap-Confirmation": "*",
-        "lipis/bootstrap-social": "*"
+        "lipis/bootstrap-social": "*",
+        "blocktrail/blocktrail-sdk": "1.2.*"
     },
     "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "blocktrail/blocktrail-sdk",
+                "version" : "1.0.0",
+                "source": {
+                    "url": "https://github.com/blocktrail/blocktrail-sdk",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
         {
             "type": "package",
             "package": {
