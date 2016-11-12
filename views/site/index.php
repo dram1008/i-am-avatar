@@ -27,7 +27,7 @@ $this->title = 'Главная';
     font-size:300%;
     padding: 20px 0px 40px 0px;
     ">
-        <iframe src="https://player.vimeo.com/video/159642580" width="800" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AGvx9vhHbDk" frameborder="0" allowfullscreen></iframe>
     </td>
 </tr>
 <tr>
