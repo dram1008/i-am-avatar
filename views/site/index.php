@@ -32,7 +32,10 @@ $this->title = 'Главная';
 </tr>
 <tr>
     <td align="center" style="background-image: url(/images/controller/site/index/bg.png); background-repeat: x;"><img
-            src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg" width="800" height="800" alt="Школа Богов"
+            src="/images/controller/site/index/Tesla-Gen-logo1-copy-5.jpg"
+            width="800"
+            height="800"
+            alt="Школа Богов"
             />
 
 
@@ -338,6 +341,11 @@ $this->title = 'Главная';
     <p>Сефера</p>
 
     <p>&nbsp;</p>
+
+    <h1 class="page-header">
+        Видео
+    </h1>
+    <p><a href="https://www.facebook.com/AquarianAgeYogaClub/videos/vb.227894580563984/1297495793603852/?type=2&theater" target="_blank">Эра Водолея</a></p>
 
     <p class="text-center" style="
    margin-top: 40px;
