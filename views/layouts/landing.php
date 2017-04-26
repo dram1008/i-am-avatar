@@ -9,6 +9,9 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 \app\assets\AppAsset::register($this);
+
+
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -44,7 +47,7 @@ use app\assets\AppAsset;
     </style>
 </head>
 
-<body style="margin: 0px 0px 0px 0px;">
+<body style="margin: 0px 0px 0px 0px; color: white;">
 <?php $this->beginBody() ?>
 
 <?= $content ?>
