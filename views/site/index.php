@@ -14,8 +14,7 @@ $this->title = 'Главная';
             <div class="col-lg-12">
                 <h1 class="text-center page-header">Школа Богов</h1>
                 <p class="text-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AGvx9vhHbDk" frameborder="0"
-                            allowfullscreen></iframe>
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgsss.merkaba%2Fvideos%2F993045284114619%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
                 </p>
             </div>
         </div>
